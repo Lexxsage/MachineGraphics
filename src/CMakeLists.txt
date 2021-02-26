@@ -4,4 +4,5 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 add_subdirectory(Base)
-add_subdirectory(Task1)
+
+add_subdirectory(devyatovskaya)
