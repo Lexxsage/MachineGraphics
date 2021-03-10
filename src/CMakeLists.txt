@@ -6,4 +6,3 @@ set(CMAKE_AUTOUIC ON)
 add_subdirectory(Base)
 
 add_subdirectory(devyatovskaya)
-add_subdirectory(Task2)
