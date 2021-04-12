@@ -1,9 +1,17 @@
-set(Task2_SRSC
+set(Task4_SRSC
         main.cpp
+        FPSCounter.cpp
+        FPSCounter.h
         GLCamera.cpp
         GLCamera.h
         GLCameraMover.cpp
         GLCameraMover.h
+        GLDirectedLight.cpp
+        GLDirectedLight.h
+        GLMaterial.cpp
+        GLMaterial.h
+        GLLightSource.cpp
+        GLLightSource.h
         GLCubeMeshGenerator.cpp
         GLCubeMeshGenerator.h
         GLFlatMeshGenerator.cpp
@@ -11,9 +19,12 @@ set(Task2_SRSC
         GLMesh.cpp
         GLMesh.h
         GLMeshGenerator.h
+        GLMeshGenerator.cpp
         GLMeshRenderer.cpp
         GLMeshRenderer.h
         GLMeshRendererGenerator.h
+        GLPointLight.cpp
+        GLPointLight.h
         GLObject.cpp
         GLObject.h
         GLScene.cpp
@@ -21,6 +32,7 @@ set(Task2_SRSC
         GLSceneRenderer.cpp
         GLSceneRenderer.h
         GLSimpleMeshRenderer.h
+        GLSimpleMeshRenderer.cpp
         GLSimpleMeshRendererGenerator.cpp
         GLSimpleMeshRendererGenerator.h
         GLSphereMeshGenerator.cpp
@@ -28,6 +40,11 @@ set(Task2_SRSC
         GLTransform.cpp
         GLTransform.h
         GLVertex.h
+        LightingDialog.h
+        LightingDialog.ui
+        GLSpotLight.cpp
+        GLSpotLight.h
+        LigtingDialog.cpp
         MeshGeneratorCollecrion.h
         MorphingDialog.cpp
         MorphingDialog.h
@@ -36,6 +53,7 @@ set(Task2_SRSC
         PhongLightingWidget.cpp
         PhongLightingWidget.h
         PhongLighting.h
+        PhongLighting.cpp
         PhongLighting.qrc
         PreparedScenes.cpp
         PreparedScenes.h
@@ -45,13 +63,22 @@ set(Task2_SRSC
         ShaderCollection.h
         ShaderData.cpp
         ShaderData.h
-        ui_MorphingDialog.h
-        ui_PhongLighting.h
-        ui_RenderDialog.h
 
-        shader.qrc
+        shaders.qrc
         Shaders/f_morphing.glsl
         Shaders/v_morphing.glsl
+        Shaders/Lighting/v_light_source.glsl
+        Shaders/Lighting/f_light_source.glsl
+        Shaders/Lighting/v_phong_lighting_wo_normal_mapping.glsl
+        Shaders/Lighting/f_phong_lighting_wo_normal_mapping.glsl
+        Shaders/Lighting/v_guro_lighting_wo_normal_mapping.glsl
+        Shaders/Lighting/f_guro_lighting_wo_normal_mapping.glsl
+        Shaders/Lighting/v_phong_lighting_normal_mapping.glsl
+        Shaders/Lighting/f_phong_lighting_normal_mapping.glsl
+
+        textures.qrc
+        Texture/Earth_Albedo.jpg
+        Texture/Earth_NormalMap.jpg
 )
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
@@ -61,8 +88,8 @@ include_directories( ${OPENGL_INCLUDE_DIRS})
 
 qt5_wrap_ui(UI_HEADERS PhongLighting.ui RenderDialog.ui MorphingDialog.ui)
 
-add_executable(Task2 ${Task2_SRSC}  ${UI_HEADERS})
+add_executable(Task4 ${Task4_SRSC}  ${UI_HEADERS})
 
-target_link_libraries(Task2 PRIVATE
+target_link_libraries(Task4 PRIVATE
     Qt5::Widgets
     ${OPENGL_LIBRARIES})
