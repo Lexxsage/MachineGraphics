@@ -1,4 +1,4 @@
-set(Task2_SRSC
+set(Task3_SRSC
         main.cpp
         FPSCounter.cpp
         FPSCounter.h
@@ -76,15 +76,8 @@ set(Task2_SRSC
 )
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
-find_package(OpenGL REQUIRED)
 
-include_directories( ${OPENGL_INCLUDE_DIRS})
+add_executable(DevyatovskayaTask3 ${Task3_SRSC})
 
-qt5_wrap_ui(UI_HEADERS PhongLighting.ui RenderDialog.ui MorphingDialog.ui)
-
-add_executable(Task2 ${Task2_SRSC}  ${UI_HEADERS})
-
-target_link_libraries(Task2 PRIVATE
-    Qt5::Widgets
-    ${OPENGL_LIBRARIES})
+target_link_libraries(DevyatovskayaTask3 PRIVATE Qt5::Widgets)
     

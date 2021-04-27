@@ -6,7 +6,7 @@
 class GLFlatMeshGenerator : public GLMeshGenerator
 {
 public:
-	explicit GLFlatMeshGenerator(float edge_len, unsigned steps_count);
+	GLFlatMeshGenerator(float edge_len, unsigned steps_count);
 
 
 	GLMesh generate(const QColor& color) const override;

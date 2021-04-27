@@ -67,10 +67,6 @@ GLScene PreparedScenes::default_scene_sphere(ShaderData& data)
     scene.add_object(data, generator, { -distance, 0, distance }, { 0, 0, 0 }, material);
     scene.add_object(data, generator, { distance, 0, distance }, { 0, 0, 0 }, material);
     scene.add_object(data, generator, { distance, 0, -distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { 2*distance, 1, -2*distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { -2*distance, 1, -2*distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { 2*distance, 1, 2*distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { -2*distance, 1, 2*distance }, { 0, 0, 0 }, material);
 
 
     for(auto& object : scene.objects) {
@@ -107,10 +103,6 @@ GLScene PreparedScenes::default_scene_cube(ShaderData& data)
     scene.add_object(data, generator, { -distance, 0, distance }, { 0, 0, 0 }, material);
     scene.add_object(data, generator, { distance, 0, distance }, { 0, 0, 0 }, material);
     scene.add_object(data, generator, { distance, 0, -distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { 2*distance, 1, -2*distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { -2*distance, 1, -2*distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { 2*distance, 1, 2*distance }, { 0, 0, 0 }, material);
-    scene.add_object(data, generator, { -2*distance, 1, 2*distance }, { 0, 0, 0 }, material);
 
 
     for (auto& object : scene.objects) {

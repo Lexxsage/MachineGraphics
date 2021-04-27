@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>Shaders/fshader.fsh</file>
-        <file>Shaders/vshader.vsh</file>
+        <file>Shaders/f_morphing.glsl</file>
+        <file>Shaders/v_morphing.glsl</file>
     </qresource>
 </RCC>
